@@ -1,0 +1,47 @@
+:root{
+    --gray-light: #F5F5F5; 
+}
+.section-3{
+    text-align: center;
+    align-items: center;
+    background-color:var(--gray-light) ;
+    padding: auto;
+}
+.section-3 .icon{
+    width: 60px;
+}
+@media(min-width: 800px){
+   
+    .section-3 .container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 0 var(--grid-gutter); /*0 mension no gap between the row next sentence mension the gap between column*/
+    }
+    
+    .section-3 .feature {
+        text-align: left;
+    }
+    
+    .section-3 .feature:nth-of-type(2) {
+        grid-row: 2/3;
+    }
+    
+    .section-3 .feature:nth-of-type(3) {
+        grid-area: 1/2/3/3; /* grid-area: 1/2/3/3;: This rule targets the third .feature element: 
+        It uses grid-area to define the position of this element within the grid using four values:
+        1: Start row.
+        2: Start column.
+        3: End row.
+        3: End column.
+        grid-area: <row-start> / <column-start> / <row-end> / <column-end>*/
+    } 
+     
+    /* .section-3 .feature {
+        flex-direction: row;
+    } */
+    
+    .section-3 .icon {
+        margin-right: 30px;
+    }
+
+}
